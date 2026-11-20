@@ -1,0 +1,36 @@
+﻿fichier,colonne,description
+train/test,ID,Identifiant unique de la ligne
+train/test,location,Nom de la ville tel que reçu par le flux d'ingestion (orthographe non normalisée)
+train/test,ingestion_timestamp,"Date et heure de réception du relevé (UTC = heure locale en Guinée). Relevés prévus toutes les 3 h, reçus avec un léger délai"
+train/test,temperature,Température de l'air (°C)
+train/test,heat_index,"Température ressentie (°C), calculée par le flux"
+train/test,comfort_index,"Indice de confort thermique (0–100), calculé par le flux"
+train/test,humidity,Humidité relative (%)
+train/test,pressure,Pression atmosphérique ramenée au niveau de la mer (hPa)
+train/test,wind_speed,Vitesse du vent (m/s)
+train/test,wind_deg,"Direction d'où vient le vent (degrés, 0 = nord, 90 = est)"
+train/test,cloud_cover,Couverture nuageuse (%)
+train/test,rain_3h,Pluie tombée pendant les 3 heures précédant le relevé (mm)
+train/test,main_condition,"Condition principale de l'API : clear, clouds, drizzle, rain, thunderstorm, haze, dust"
+train/test,guinea_season,Saison selon le calendrier du flux : rainy (mai–oct.) ou dry (nov.–avr.)
+train/test,temp_category,"Catégorie de température du flux : cool (<15 °C), mild (15–25), warm (25–35), hot (≥35)"
+train,target,"Classe de pluie cumulée sur les 24 h suivant le relevé : aucune (<1 mm), faible (1–10), moderee (10–30), forte (>30)"
+stations,location,Nom officiel de la ville
+stations,region,"Région naturelle : Guinée Maritime, Moyenne Guinée, Haute Guinée, Guinée Forestière"
+stations,lat / lon,Coordonnées de la station (degrés décimaux)
+stations,altitude_m,Altitude de la station (m)
+stations,distance_cote_km,Distance approximative à l'océan Atlantique (km)
+stations,cultures_principales,Principales cultures de la zone (séparées par ;)
+stations,pluie_annuelle_normale_mm,"Cumul annuel moyen de pluie (normale climatologique, mm)"
+regional_daily,date,Jour D ; la ligne contient l'information disponible à 00:00 le jour D
+regional_daily,region,Région naturelle (même nomenclature que stations)
+regional_daily,indice_harmattan,"Intensité de l'harmattan et de la poussière (0 = nul, 1 = très fort)"
+regional_daily,humidite_sol,"Humidité relative du sol de surface (0 = sec, 1 = saturé)"
+regional_daily,ndvi,"Indice de végétation (0–1), publié tous les 8 jours"
+regional_daily,pluie_veille_regionale_mm,Pluie moyenne estimée sur la région pendant le jour D-1 (mm)
+climat_national,date,Jour D ; information disponible le jour D
+climat_national,latitude_fit,Latitude du Front Inter-Tropical au-dessus de l'Afrique de l'Ouest (°N)
+climat_national,mjo_phase,Phase (1 à 8) de l'oscillation de Madden-Julian
+climat_national,mjo_amplitude,Intensité de la MJO (moins de 1 = faible influence)
+sample_submission,ID,ID des lignes de test à prédire
+sample_submission,aucune / faible / moderee / forte,Probabilité prédite pour chaque classe
